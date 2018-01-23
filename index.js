@@ -2,9 +2,7 @@
 
 /**TODO
 -Make the file input dynamic
--fix the webvtt output so it actually outputs words correctly
--fix the time formatting
--Add a check for pronunciation (since it doesn't have start or end time)
+-Save output to a .vtt file
 -Probably other stuff too
 */
 
