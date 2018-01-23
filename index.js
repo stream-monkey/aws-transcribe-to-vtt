@@ -24,8 +24,11 @@ fs.readFile('beemovie.json', 'utf8', (err, file) => {
             console.log(err);
             return err
         }
-            console.log(res);
+        fs.writeFile('output/beemovie.vtt', res, (err) => {
+            if (err) throw err;
+            console.log('The file has been saved!');
             process.exit()
-            return res
+        });
+        return res
     })
 })
