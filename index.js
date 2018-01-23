@@ -2,7 +2,7 @@
 
 /**TODO
 -Make the file input dynamic
--Save output to a .vtt file
+-Make file output _name_ dynamic
 -Probably other stuff too
 */
 const fs = require('fs')
