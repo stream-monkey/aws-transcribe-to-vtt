@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/stream-monkey/aws-transcribe-to-vtt/issues"
   },
-  "homepage": "https://github.com/stream-monkey/aws-transcribe-to-vtt#readme"
+  "homepage": "https://github.com/stream-monkey/aws-transcribe-to-vtt#readme",
+  "dependencies": {
+    "async": "^2.6.0"
+  }
 }
