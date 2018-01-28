@@ -15,6 +15,14 @@ const VttConvert = require('./lib/vttConvert')
 const vttConvert = new VttConvert()
 
 
+var express = require('express')
+var app = express()
+
+app.use(express.static('output'))
+
+app.listen(3000)
+
+
 fs.readFile('beemovie.json', 'utf8', (err, file) => {
     if (err) {
         console.log(err);
@@ -27,10 +35,10 @@ fs.readFile('beemovie.json', 'utf8', (err, file) => {
         let driver = await new Builder().forBrowser('firefox').build();
         try {
             console.log('opening test page...\n');
-            await driver.get('file:///repos/aws-transcribe-to-vtt/index.html');
+            await driver.get('http://localhost:3000/index.html');
         } finally {
         // await driver.quit();
-            process.exit()
+            // process.exit()
         }
     })();
 

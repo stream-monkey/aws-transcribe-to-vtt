@@ -19,5 +19,8 @@
   "dependencies": {
     "async": "^2.6.0",
     "selenium-webdriver": "^4.0.0-alpha.1"
+  },
+  "devDependencies": {
+    "express": "^4.16.2"
   }
 }
