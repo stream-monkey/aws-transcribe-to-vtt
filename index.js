@@ -38,7 +38,6 @@ fs.readFile('beemovie.json', 'utf8', (err, file) => {
             console.log('Opening test page at http://localhost:3000 \n');
             await driver.get('http://localhost:3000');
         } finally {
-            // await driver.quit();
             process.exit()
         }
     })();
