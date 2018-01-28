@@ -1,7 +1,7 @@
 'use strict'
 
 /**TODO
--Dynamic input for m3u8 location
+-???
 */
 
 const fs = require('fs')
@@ -19,6 +19,18 @@ app.use(express.static('output'))
 app.listen(3000)
 
 var path = prompt('What is the path to the json file from AWS? ');
+var m3u8_url = prompt('What is the URL to your M3U8 to test? ');
+
+fs.readFile('output/sample.html', 'utf8', function (err,data) {
+  if (err) {
+    return console.log(err);
+  }
+  var result = data.replace(/replace me/g, m3u8_url);
+
+  fs.writeFile('output/index.html', result, 'utf8', function (err) {
+     if (err) return console.log(err);
+  });
+});
 
 fs.readFile(path, 'utf8', (err, file) => {
     if (err) {
