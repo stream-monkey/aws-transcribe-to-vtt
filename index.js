@@ -35,7 +35,7 @@ fs.readFile('beemovie.json', 'utf8', (err, file) => {
         let driver = await new Builder().forBrowser('firefox').build();
         try {
             console.log('opening test page...\n');
-            await driver.get('http://localhost:3000/index.html');
+            await driver.get('http://localhost:3000');
         } finally {
         // await driver.quit();
             // process.exit()
