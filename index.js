@@ -1,9 +1,7 @@
 'use strict'
 
 /**TODO
--Make the file input dynamic
--Make file output _name_ dynamic, or just decide to leave it as output.vtt
--Probably other stuff too
+-Dynamic input for m3u8 location
 */
 
 const fs = require('fs')
