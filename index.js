@@ -15,8 +15,8 @@ const VttConvert = require('./lib/vttConvert')
 const vttConvert = new VttConvert()
 
 
-var express = require('express')
-var app = express()
+const express = require('express')
+const app = express()
 
 app.use(express.static('output'))
 
@@ -34,11 +34,11 @@ fs.readFile('beemovie.json', 'utf8', (err, file) => {
     (async function startPage() {
         let driver = await new Builder().forBrowser('firefox').build();
         try {
-            console.log('opening test page...\n');
+            console.log('opening test page at http://localhost:3000...\n');
             await driver.get('http://localhost:3000');
         } finally {
-        // await driver.quit();
-            // process.exit()
+            // await driver.quit();
+            process.exit()
         }
     })();
 
