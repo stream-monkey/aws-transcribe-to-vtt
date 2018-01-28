@@ -11,20 +11,18 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
 const webdriver = require('selenium-webdriver'),
     firefox = require('selenium-webdriver/firefox');
 const async = require('async');
-
 const VttConvert = require('./lib/vttConvert')
 const vttConvert = new VttConvert()
-
-
 const express = require('express')
 const app = express()
+const prompt = require('prompt-sync')();
 
 app.use(express.static('output'))
-
 app.listen(3000)
 
+var path = prompt('What is the path to the json file from AWS? ');
 
-fs.readFile('beemovie.json', 'utf8', (err, file) => {
+fs.readFile(path, 'utf8', (err, file) => {
     if (err) {
         console.log(err);
         return err
