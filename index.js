@@ -2,9 +2,10 @@
 
 /**TODO
 -Make the file input dynamic
--Make file output _name_ dynamic
+-Make file output _name_ dynamic, or just decide to leave it as output.vtt
 -Probably other stuff too
 */
+
 const fs = require('fs')
 const {Builder, By, Key, until} = require('selenium-webdriver');
 const webdriver = require('selenium-webdriver'),
@@ -34,7 +35,7 @@ fs.readFile('beemovie.json', 'utf8', (err, file) => {
     (async function startPage() {
         let driver = await new Builder().forBrowser('firefox').build();
         try {
-            console.log('opening test page at http://localhost:3000...\n');
+            console.log('Opening test page at http://localhost:3000 \n');
             await driver.get('http://localhost:3000');
         } finally {
             // await driver.quit();
