@@ -1,7 +1,7 @@
 'use strict'
 
 /**TODO
--???
+-Break into node index.js and node test functions so it doesn't load the player every time.
 */
 
 const fs = require('fs')
