@@ -1,7 +1,7 @@
 {
   "name": "aws-transcribe-to-vtt",
   "version": "1.0.0",
-  "description": "",
+  "description": "Turn JSON from Amazon AWS Transcribe into VTT files for use as subtitles.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://chrisgerrish@github.com/stream-monkey/aws-transcribe-to-vtt.git"
   },
-  "author": "",
+  "author": "Paul Le Grand <contact@paullegrand.org> (http://www.paullegrand.org)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/stream-monkey/aws-transcribe-to-vtt/issues"
@@ -23,5 +23,20 @@
   },
   "devDependencies": {
     "express": "^4.16.2"
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [
+    "AWS",
+    "Transcribe",
+    "JSON",
+    "VTT",
+    "WebVTT",
+    "speech",
+    "recognition",
+    "format",
+    "subtitle",
+    "subtitles"
+  ]
 }
