@@ -1,6 +1,6 @@
 {
   "name": "aws-transcribe-to-vtt",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Turn JSON from Amazon AWS Transcribe into VTT files for use as subtitles.",
   "main": "index.js",
   "scripts": {
