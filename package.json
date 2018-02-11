@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://chrisgerrish@github.com/stream-monkey/aws-transcribe-to-vtt.git"
+    "url": "git+https://github.com/stream-monkey/aws-transcribe-to-vtt.git"
   },
   "author": "Paul Le Grand <contact@paullegrand.org> (http://www.paullegrand.org)",
   "license": "ISC",
