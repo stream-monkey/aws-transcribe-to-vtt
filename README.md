@@ -10,3 +10,7 @@ The outputted VTT file is saved to `output/output.vtt`. Easiest way to run is pl
 
 ### To run
     node index.js
+
+
+## Contributing:
+Contributors are more than welcome! Just fork and create pull requests.
