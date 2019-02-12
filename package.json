@@ -2,7 +2,6 @@
   "name": "aws-transcribe-to-vtt",
   "version": "1.0.6",
   "description": "Turn JSON from Amazon AWS Transcribe into VTT files for use as subtitles.",
-  "bin": "index.js",
   "main": "lib/vttConvert.js",
   "scripts": {
     "test": "mocha --reporter spec"
@@ -17,16 +16,13 @@
     "url": "https://github.com/stream-monkey/aws-transcribe-to-vtt/issues"
   },
   "homepage": "https://github.com/stream-monkey/aws-transcribe-to-vtt#readme",
-  "dependencies": {
-    "async": "^2.6.2",
-    "package.json": "^2.0.1",
-    "prompt-sync": "^4.1.6",
-    "selenium-webdriver": "^4.0.0-alpha.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "chai": "^4.2.0",
     "express": "^4.16.4",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "prompt-sync": "^4.1.6",
+    "selenium-webdriver": "^4.0.0-alpha.1"
   },
   "directories": {
     "lib": "lib"
