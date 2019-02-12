@@ -5,25 +5,16 @@ Takes the JSON from [Amazon AWS Transcribe](https://aws.amazon.com/transcribe/) 
 ## api
 
 ```javascript
-vttConvert(json);
+const vttConvert = require('aws-transcribe-to-vtt');
+
+
+const vtt = vttConvert(json);
 ```
 
 `json` is a string consisting of JSON returned from Amazon's transcribe service
 
-returns a string consisting of the `vtt` file.
+returns a string consisting of the json converted to `vtt` format.
 
-
-## usage
-
-```javascript
-const vttConvert = require('aws-transcribe-to-vtt');
-
-const json = '{ }'; // the JSON from AWS transcribe service here
-
-const vtt = vttConvert(json);  // vtt 
-
-
-```
 
 ## testing
 ```javascript
