@@ -17,14 +17,14 @@
   },
   "homepage": "https://github.com/stream-monkey/aws-transcribe-to-vtt#readme",
   "dependencies": {
-    "async": "^2.6.0",
-    "prompt-sync": "^4.1.5",
+    "async": "^2.6.2",
+    "prompt-sync": "^4.1.6",
     "selenium-webdriver": "^4.0.0-alpha.1"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
-    "express": "^4.16.2",
-    "mocha": "^5.0.0"
+    "chai": "^4.2.0",
+    "express": "^4.16.4",
+    "mocha": "^5.2.0"
   },
   "directories": {
     "lib": "lib"
