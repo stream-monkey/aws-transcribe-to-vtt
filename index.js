@@ -5,9 +5,7 @@
 */
 
 const fs = require('fs')
-const async = require('async');
-const VttConvert = require('./lib/vttConvert')
-const vttConvert = new VttConvert()
+const vttConvert = require('aws-transcription-to-vtt');
 const express = require('express')
 const app = express()
 const prompt = require('prompt-sync')();
@@ -22,18 +20,15 @@ fs.readFile(path, 'utf8', (err, file) => {
         return err
     }
 
-    vttConvert.convertFile(file, (err, res) =>
-    {
-        if (err)
-        {
-            console.log(err);
-            return err
-        }
+    try {
+       const res = vttConvert(JSON.parse(file));
+
         fs.writeFile('output/output.vtt', res, (err) => {
             if (err) throw err;
             console.log('The file has been saved!');
             process.exit();
         });
-        return res
-    })
+    } catch (err) {
+        console.log(err);
+    }
 })

@@ -8,9 +8,7 @@ const fs = require('fs')
 const {Builder, By, Key, until} = require('selenium-webdriver');
 const webdriver = require('selenium-webdriver'),
     firefox = require('selenium-webdriver/firefox');
-const async = require('async');
-const VttConvert = require('../lib/vttConvert')
-const vttConvert = new VttConvert()
+const vttConvert = require('aws-transcription-to-vtt');
 const express = require('express')
 const app = express()
 const prompt = require('prompt-sync')();
@@ -50,17 +48,15 @@ fs.readFile(path, 'utf8', (err, file) => {
         }
     })();
 
-    vttConvert.convertFile(file, (err, res) =>
-    {
-        if (err)
-        {
-            console.log(err);
-            return err
-        }
+    try {
+        const res = vttConvert(JSON.parse(file));
+
         fs.writeFile('output/output.vtt', res, (err) => {
             if (err) throw err;
             console.log('The file has been saved!');
         });
-        return res
-    })
+
+    } catch (err) {
+        console.log(err);
+    }
 })

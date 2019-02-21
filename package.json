@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/stream-monkey/aws-transcribe-to-vtt#readme",
   "dependencies": {
-    "async": "^2.6.0",
+    "aws-transcription-to-vtt": "^1.0.1",
     "prompt-sync": "^4.1.5",
     "selenium-webdriver": "^4.0.0-alpha.1"
   },
